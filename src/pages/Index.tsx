@@ -42,48 +42,48 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section 
-        className="relative section-padding bg-gradient-to-b from-background to-secondary overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+      <section className="section-padding bg-background">
+        <div className="container">
+          <div className="max-w-5xl mx-auto text-center space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-white">Transform Your Business with </span>
-              <span className="text-gradient">AI Applications</span>
+              Turn Ideas into{" "}
+              <span className="text-gradient">AI-Powered Applications</span>{" "}
+              in 8 Weeks
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-              Discover how we've transformed businesses with AI applications delivered in 8 weeks. Real projects. Real results. Real impact.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              We deliver production-ready AI applications in just 8 weeks. From WhatsApp automation to complex multi-agent systems, we turn your ideas into reality fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="gradient-orange border-0 text-lg px-8 py-6">
-                <Link to="/projects">
+                <Link to="/ai-brief">
                   Start Your Project <ArrowRight className="ml-2" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 bg-white/10 border-white/20 text-white hover:bg-white/20">
-                <Link to="/process">Learn Our Process</Link>
+              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6">
+                <Link to="/process">See How It Works</Link>
               </Button>
             </div>
-            <p className="text-sm text-gray-300">
-              Free 30-minute consultation • No commitment required • Expert AI guidance
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="section-padding bg-background">
-        <div className="container">
+      {/* AI Platforms Section */}
+      <section className="section-padding gradient-dark text-white">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              We Design and Launch <span className="text-gradient">AI-Powered Platforms</span>
+            </h2>
+            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              From concept to production in 8 weeks. We build intelligent systems that scale.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center space-y-2">
                 <div className="text-4xl md:text-5xl font-bold text-gradient">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-white/70">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -91,45 +91,109 @@ const Index = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-background">
         <div className="container space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">
               What We <span className="text-gradient">Build</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From AI chatbots to complex automation systems, we deliver production-ready solutions
-            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="p-8 space-y-4 card-hover bg-card border-border">
+              <Card key={index} className="p-8 space-y-4 bg-card border-border hover:border-primary transition-colors">
                 <div className="text-5xl">{service.icon}</div>
                 <h3 className="text-2xl font-semibold">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Platforms in Production */}
+      <section className="section-padding gradient-dark text-white">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Platforms in <span className="text-gradient">Production</span>
+            </h2>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              Real AI applications delivering real results for our clients
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 space-y-4 bg-card/10 border-white/10 text-white">
+              <h3 className="text-2xl font-semibold">FashionOS</h3>
+              <p className="text-white/70">AI-powered fashion wholesale platform connecting manufacturers with retailers</p>
+              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                View Case Study <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+            <Card className="p-8 space-y-4 bg-card/10 border-white/10 text-white">
+              <h3 className="text-2xl font-semibold">AutoMax AI</h3>
+              <p className="text-white/70">Intelligent dealership assistant handling 1,000+ customer inquiries monthly</p>
+              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                View Case Study <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+            <Card className="p-8 space-y-4 bg-card/10 border-white/10 text-white">
+              <h3 className="text-2xl font-semibold">I Love Medellin</h3>
+              <p className="text-white/70">Multi-agent travel assistant providing personalized recommendations 24/7</p>
+              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                View Case Study <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Card>
+          </div>
 
           <div className="text-center">
             <Button asChild size="lg" className="gradient-orange border-0">
-              <Link to="/services">
-                View All Services <ArrowRight className="ml-2" />
+              <Link to="/projects">
+                See All Projects <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Technology Showcase */}
+      {/* Three Pillars */}
       <section className="section-padding bg-background">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Three Pillars of <span className="text-gradient">AI Success</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 space-y-4 bg-card border-border text-center">
+              <div className="text-5xl mx-auto w-fit">🎯</div>
+              <h3 className="text-2xl font-semibold">Clear Vision</h3>
+              <p className="text-muted-foreground">We start with your business goals and build AI that delivers measurable results</p>
+            </Card>
+            <Card className="p-8 space-y-4 bg-card border-border text-center">
+              <div className="text-5xl mx-auto w-fit">⚡</div>
+              <h3 className="text-2xl font-semibold">Speed & AI</h3>
+              <p className="text-muted-foreground">8-week delivery using cutting-edge AI tools and proven development processes</p>
+            </Card>
+            <Card className="p-8 space-y-4 bg-card border-border text-center">
+              <div className="text-5xl mx-auto w-fit">🚀</div>
+              <h3 className="text-2xl font-semibold">Reliable Delivery</h3>
+              <p className="text-muted-foreground">Production-ready systems with 99.9% uptime and ongoing support</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Showcase */}
+      <section className="section-padding gradient-dark text-white">
         <div className="container space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">
               We Build With <span className="text-gradient">The Best</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Cutting-edge AI tools and proven technologies for reliable results
             </p>
           </div>
@@ -138,9 +202,9 @@ const Index = () => {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-6 bg-card rounded-xl border border-border hover:border-primary transition-colors"
+                className="flex items-center justify-center p-6 bg-white/5 rounded-xl border border-white/10 hover:border-primary transition-colors"
               >
-                <span className="font-medium text-foreground">{tech}</span>
+                <span className="font-medium text-white">{tech}</span>
               </div>
             ))}
           </div>
@@ -148,7 +212,7 @@ const Index = () => {
       </section>
 
       {/* Process Timeline */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-background">
         <div className="container space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">
@@ -161,29 +225,146 @@ const Index = () => {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { phase: "1", title: "Design Sprint", weeks: "Week 1", icon: Clock },
-              { phase: "2", title: "Build", weeks: "Weeks 2-6", icon: Zap },
-              { phase: "3", title: "Test", weeks: "Week 7", icon: Shield },
-              { phase: "4", title: "Launch", weeks: "Week 8", icon: TrendingUp },
-            ].map((step) => (
-              <Card key={step.phase} className="p-6 space-y-4 bg-card border-border">
-                <div className="flex items-center justify-between">
-                  <span className="text-5xl font-bold text-gradient">{step.phase}</span>
-                  <step.icon className="h-8 w-8 text-primary" />
+              { phase: "Week 1-2", title: "DESIGN SPRINT", icon: "🎨", color: "bg-red-500" },
+              { phase: "Week 3-6", title: "DEVELOP", icon: "💻", color: "bg-purple-500" },
+              { phase: "Week 7", title: "REFINE", icon: "🔍", color: "bg-blue-500" },
+              { phase: "Week 8", title: "LAUNCH", icon: "🚀", color: "bg-green-500" },
+            ].map((step, index) => (
+              <Card key={index} className="p-8 space-y-4 bg-card border-border text-center">
+                <div className={`w-16 h-16 mx-auto rounded-full ${step.color} flex items-center justify-center text-3xl`}>
+                  {step.icon}
                 </div>
                 <h3 className="text-xl font-semibold">{step.title}</h3>
-                <p className="text-muted-foreground">{step.weeks}</p>
+                <p className="text-muted-foreground">{step.phase}</p>
               </Card>
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center space-y-4">
+            <p className="text-lg text-muted-foreground">
+              Compare that to traditional agencies: 6+ months, unclear timelines, budget overruns
+            </p>
             <Button asChild size="lg" className="gradient-orange border-0">
               <Link to="/process">
                 See Full Process <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Investment Levels */}
+      <section className="section-padding bg-secondary">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Investment Levels
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Transparent pricing. No hidden fees. Clear deliverables.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 space-y-6 bg-card border-border">
+              <div>
+                <h3 className="text-2xl font-bold mb-2">AI PROTOTYPE</h3>
+                <div className="text-4xl font-bold text-gradient">$15K-25K</div>
+                <p className="text-muted-foreground mt-2">Perfect for validating your AI concept</p>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">MVP in 4 weeks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Core AI functionality</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">User testing ready</span>
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/contact">Get Started</Link>
+              </Button>
+            </Card>
+
+            <Card className="p-8 space-y-6 bg-card border-primary border-2 relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                POPULAR
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">FULL PLATFORM</h3>
+                <div className="text-4xl font-bold text-gradient">$35K-55K</div>
+                <p className="text-muted-foreground mt-2">Production-ready AI application</p>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Full platform in 8 weeks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Multi-agent AI systems</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Full deployment & training</span>
+                </li>
+              </ul>
+              <Button className="w-full gradient-orange border-0" asChild>
+                <Link to="/contact">Get Started</Link>
+              </Button>
+            </Card>
+
+            <Card className="p-8 space-y-6 bg-card border-border">
+              <div>
+                <h3 className="text-2xl font-bold mb-2">ENTERPRISE</h3>
+                <div className="text-4xl font-bold text-gradient">$75K+</div>
+                <p className="text-muted-foreground mt-2">Custom AI solutions at scale</p>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Complex multi-system integration</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Dedicated team & support</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Ongoing optimization</span>
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/contact">Contact Sales</Link>
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Brief CTA */}
+      <section className="section-padding bg-background">
+        <div className="container">
+          <Card className="p-12 bg-card border-border max-w-4xl mx-auto">
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Create Your Project Brief in Minutes
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Answer a few quick questions and get a custom AI roadmap for your business
+              </p>
+              <Button size="lg" className="gradient-orange border-0" asChild>
+                <Link to="/ai-brief">
+                  Start Your Brief <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
 
