@@ -152,93 +152,96 @@ const Index = () => {
       </section>
 
       {/* Main Services */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding bg-background">
         <div className="container space-y-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-10 space-y-6 bg-card border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-bold">Intelligent Applications That Think</h3>
-              <p className="text-muted-foreground">
-                We build sophisticated AI systems using the latest models from OpenAI, Anthropic, and more.
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <Card className="p-8 space-y-6 bg-white dark:bg-card border hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-400"></div>
+              <h3 className="text-2xl font-bold text-foreground">Intelligent Applications That Think</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                We build sophisticated AI systems using the latest models from OpenAI, Anthropic, and open-source alternatives.
               </p>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Conversational AI & Chatbots</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Multi-Agent Systems (CrewAI)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>RAG Knowledge Bases</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Document Processing</span>
                 </li>
               </ul>
-              <div className="pt-4 border-t">
-                <div className="text-2xl font-bold text-primary">Starting at $30,000</div>
-                <div className="text-sm text-muted-foreground">2–3 week delivery</div>
+              <div className="pt-6 space-y-1">
+                <div className="text-2xl font-bold text-orange-500">Starting at $30,000</div>
+                <div className="text-sm text-muted-foreground">2-6 week delivery</div>
               </div>
             </Card>
 
-            <Card className="p-10 space-y-6 bg-card border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-bold">From Concept to Launch in Days</h3>
-              <p className="text-muted-foreground">
-                Skip months of development. We use AI-powered platforms to build production-ready apps fast.
+            <Card className="p-8 space-y-6 bg-white dark:bg-card border hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-400"></div>
+              <h3 className="text-2xl font-bold text-foreground">From Concept to Launch in Days</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Skip months of development. We use AI-powered platforms to build production applications at unprecedented speed.
               </p>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Lovable for instant apps</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Webflow for marketing sites</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Scalable by standards</span>
+                  <span>•</span>
+                  <span>Supabase for backends</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>React for custom UIs</span>
                 </li>
               </ul>
-              <div className="pt-4 border-t">
-                <div className="text-2xl font-bold text-primary">Starting at $15,000</div>
-                <div className="text-sm text-muted-foreground">1–4 week delivery</div>
+              <div className="pt-6 space-y-1">
+                <div className="text-2xl font-bold text-orange-500">Starting at $15,000</div>
+                <div className="text-sm text-muted-foreground">1-4 week delivery</div>
               </div>
             </Card>
 
-            <Card className="p-10 space-y-6 bg-card border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-bold">Automate Everything That Repeats</h3>
-              <p className="text-muted-foreground">
-                Connect your tools, eliminate manual work, and let AI intelligently manage your workflows.
+            <Card className="p-8 space-y-6 bg-white dark:bg-card border hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-400"></div>
+              <h3 className="text-2xl font-bold text-foreground">Automate Everything That Repeats</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Connect your tools, eliminate manual work, and let intelligent workflows run your operations 24/7.
               </p>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Customer service (WhatsApp)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Data processing (n8n)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Payment workflows (Stripe)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>•</span>
                   <span>Email sequences</span>
                 </li>
               </ul>
-              <div className="pt-4 border-t">
-                <div className="text-2xl font-bold text-primary">Starting at $10,000</div>
-                <div className="text-sm text-muted-foreground">1–2 week delivery</div>
+              <div className="pt-6 space-y-1">
+                <div className="text-2xl font-bold text-orange-500">Starting at $10,000</div>
+                <div className="text-sm text-muted-foreground">1-2 week delivery</div>
               </div>
             </Card>
           </div>
