@@ -13,6 +13,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import AIBrief from "./pages/AIBrief";
 import CRMLogin from "./pages/CRMLogin";
+import WhatsAppAutomation from "./pages/WhatsAppAutomation";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/ai-brief" element={<AIBrief />} />
           <Route path="/crm-login" element={<CRMLogin />} />
+          <Route path="/services/whatsapp-automation" element={<WhatsAppAutomation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

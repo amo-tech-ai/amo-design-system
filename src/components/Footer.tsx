@@ -61,6 +61,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/services/whatsapp-automation" className="text-muted-foreground hover:text-primary transition-colors">
+                  WhatsApp Automation
+                </Link>
+              </li>
+              <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
                   Process Automation
                 </Link>
