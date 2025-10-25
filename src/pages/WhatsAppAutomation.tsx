@@ -20,17 +20,14 @@ const WhatsAppAutomation = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                WhatsApp Automation <span className="text-[hsl(142,71%,45%)]">Services</span>
+                Automate, Sell & Support — <span className="text-[hsl(142,71%,45%)]">All on WhatsApp</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Transform WhatsApp into your most powerful business channel with AI-driven automation that scales customer engagement and revenue.
+                We help businesses turn WhatsApp into a 24/7 sales and customer service channel — powered by automation, AI agents, and real data. No delays. No missed messages. Just seamless conversations that convert into revenue.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-[hsl(142,71%,45%)] hover:bg-[hsl(142,71%,40%)] text-white">
-                  <Link to="/contact">Start a WhatsApp Project</Link>
-                </Button>
-                <Button size="lg" variant="outline">
-                  <Link to="/process">See How It Works</Link>
+                  <Link to="/contact">📞 Book a Free WhatsApp Automation Audit</Link>
                 </Button>
               </div>
             </div>
@@ -68,10 +65,10 @@ const WhatsAppAutomation = () => {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              The Strategic Advantage: Why Smart Businesses Choose WhatsApp
+              Why WhatsApp Automation Matters
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              WhatsApp isn't just messaging—it's the most direct line to your customers with unmatched engagement rates.
+              Your customers are already on WhatsApp — we make it work harder for you. Over 2 billion people use WhatsApp daily. AMO AI connects your brand to them with AI-powered chat flows, CRM integrations, and automated campaigns that scale your communication and sales — all through the official WhatsApp Business API.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -106,38 +103,57 @@ const WhatsAppAutomation = () => {
         </div>
       </section>
 
-      {/* What We Build */}
+      {/* Core Services */}
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What We Build: Solutions That Drive Revenue
+              Our Core Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From customer service to sales automation, we create WhatsApp experiences that scale your business.
-            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: MessageCircle,
-                title: "AI Customer Support",
-                description: "24/7 instant responses that resolve 80% of inquiries automatically"
-              },
-              {
-                icon: ShoppingCart,
-                title: "Sales & E-commerce",
-                description: "Product catalogs, order tracking, and automated checkout flows"
-              },
-              {
-                icon: Calendar,
-                title: "Appointment Booking",
-                description: "Smart scheduling with confirmations, reminders, and rescheduling"
+                title: "WhatsApp Automation Setup",
+                tagline: "Conversations that run themselves.",
+                description: "We set up your verified WhatsApp Business API and build intelligent workflows to greet, qualify, and convert leads automatically.",
+                features: ["Auto-replies", "Lead capture", "Payment & order updates", "Multi-language flows"]
               },
               {
                 icon: Users,
-                title: "Lead Generation",
-                description: "Qualify leads, collect info, and route to sales teams instantly"
+                title: "AI Chat Agents & Copilots",
+                tagline: "Your 24/7 sales and support team.",
+                description: "We train AI agents to handle real conversations — qualifying leads, answering FAQs, booking services, and learning from each chat.",
+                features: ["Conversational memory", "Smart human handoff", "Personalized tone", "Analytics dashboard"]
+              },
+              {
+                icon: BarChart3,
+                title: "CRM & Pipeline Integration",
+                tagline: "Every chat becomes a lead.",
+                description: "We connect WhatsApp with your CRM or Supabase database so every interaction is tracked, tagged, and measurable.",
+                features: ["Lead syncing", "Follow-up automations", "Deal tracking", "Performance reports"]
+              },
+              {
+                icon: TrendingUp,
+                title: "WhatsApp Marketing Campaigns",
+                tagline: "Broadcast messages that get read.",
+                description: "We help you send targeted updates, promotions, and reminders using rich media templates and opt-in lists.",
+                features: ["Broadcast scheduling", "Segmentation", "Catalog cards", "Real-time engagement tracking"]
+              },
+              {
+                icon: ShoppingCart,
+                title: "E-commerce & Payment Flows",
+                tagline: "From chat to checkout in seconds.",
+                description: "Sell products or services directly in WhatsApp — with built-in checkout and order confirmations.",
+                features: ["Shopify / Stripe integration", "Abandoned cart recovery", "Order updates", "Upsell automations"]
+              },
+              {
+                icon: Building2,
+                title: "Industry Solutions",
+                tagline: "Tailored automation for every sector.",
+                description: "We customize chat journeys for Fashion, Restaurants, Real Estate, Travel, and Education — each with industry-specific flows.",
+                features: ["Booking & reservation bots", "Menu & catalog sharing", "Feedback & surveys", "Event registration"]
               }
             ].map((service, index) => (
               <Card key={index} className="card-hover border-2 hover:border-[hsl(142,71%,45%)] transition-all">
@@ -146,9 +162,18 @@ const WhatsAppAutomation = () => {
                     <service.icon className="text-[hsl(142,71%,45%)]" size={24} />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <p className="text-sm font-semibold text-[hsl(142,71%,45%)] mt-2">{service.tagline}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <CardDescription className="text-base">{service.description}</CardDescription>
+                  <div className="space-y-1">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <CheckCircle className="text-[hsl(142,71%,45%)]" size={14} />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -156,315 +181,178 @@ const WhatsAppAutomation = () => {
         </div>
       </section>
 
-      {/* Industry Solutions */}
+      {/* Real-World Use Cases */}
       <section className="section-padding bg-[hsl(0,0%,5%)] text-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industry Solutions That Drive Results
+              Real-World Use Cases
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-[hsl(0,0%,11%)] border-[hsl(0,0%,18%)] text-white">
               <CardHeader>
-                <Building2 className="text-[hsl(142,71%,45%)] mb-2" size={32} />
-                <CardTitle className="text-2xl">E-commerce & Retail</CardTitle>
+                <Users className="text-[hsl(142,71%,45%)] mb-2" size={32} />
+                <CardTitle className="text-xl">Lead Generation Flow</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-300">Automated order updates, product recommendations, and abandoned cart recovery that converts browsers into buyers.</p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-[hsl(142,71%,45%)]" size={18} />
-                    <span>Real-time order tracking</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-[hsl(142,71%,45%)]" size={18} />
-                    <span>Personalized product catalogs</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-[hsl(142,71%,45%)]" size={18} />
-                    <span>Automated cart recovery</span>
-                  </div>
-                </div>
+              <CardContent>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Ad → WhatsApp chat → AI qualifies lead → CRM sync → Auto follow-up → Payment link → Confirmation
+                </p>
               </CardContent>
             </Card>
             <Card className="bg-[hsl(0,0%,11%)] border-[hsl(0,0%,18%)] text-white">
               <CardHeader>
-                <Users className="text-[hsl(142,71%,45%)] mb-2" size={32} />
-                <CardTitle className="text-2xl">Service Businesses</CardTitle>
+                <ShoppingCart className="text-[hsl(142,71%,45%)] mb-2" size={32} />
+                <CardTitle className="text-xl">E-commerce Flow</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-300">Smart booking systems, service reminders, and customer communication that keeps your calendar full.</p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-[hsl(142,71%,45%)]" size={18} />
-                    <span>Automated appointment scheduling</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-[hsl(142,71%,45%)]" size={18} />
-                    <span>Service reminders & follow-ups</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-[hsl(142,71%,45%)]" size={18} />
-                    <span>Customer feedback collection</span>
-                  </div>
-                </div>
+              <CardContent>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Customer chats → Browses product catalog → Adds to cart → Pays in-chat → Receives updates
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[hsl(0,0%,11%)] border-[hsl(0,0%,18%)] text-white">
+              <CardHeader>
+                <Calendar className="text-[hsl(142,71%,45%)] mb-2" size={32} />
+                <CardTitle className="text-xl">Service Booking Flow</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Client messages → AI confirms slot → Invoice sent → Booking recorded → CRM updated
+                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* ROI Mathematics */}
+      {/* Results That Speak */}
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              The ROI Mathematics: <span className="text-[hsl(142,71%,45%)]">Real Client Data</span>
+              Results That Speak
             </h2>
+            <p className="text-muted-foreground">Average improvement from AMO AI's WhatsApp automation clients</p>
           </div>
           <div className="bg-gradient-to-br from-[hsl(142,71%,97%)] to-background rounded-3xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">E-commerce Client Case Study</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="text-muted-foreground">Monthly Conversations</span>
-                    <span className="font-bold">12,000</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="text-muted-foreground">Automation Rate</span>
-                    <span className="font-bold text-[hsl(142,71%,45%)]">85%</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="text-muted-foreground">Avg. Order Value</span>
-                    <span className="font-bold">$87</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <span className="text-muted-foreground">Conversion Rate</span>
-                    <span className="font-bold text-[hsl(142,71%,45%)]">12%</span>
-                  </div>
-                </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <p className="text-sm text-muted-foreground mb-2">Response time</p>
+                <p className="text-2xl font-bold text-red-500 mb-1">2 hours</p>
+                <ArrowRight className="text-[hsl(142,71%,45%)] my-2" size={20} />
+                <p className="text-2xl font-bold text-[hsl(142,71%,45%)]">&lt; 2 minutes</p>
               </div>
-              <div className="flex flex-col justify-center">
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <p className="text-sm text-muted-foreground mb-2">Monthly Revenue Impact</p>
-                  <p className="text-4xl font-bold text-[hsl(142,71%,45%)] mb-4">$125,280</p>
-                  <p className="text-sm text-muted-foreground mb-2">Implementation Investment</p>
-                  <p className="text-2xl font-bold mb-4">$8,500</p>
-                  <div className="pt-4 border-t">
-                    <p className="text-sm text-muted-foreground mb-1">First Month ROI</p>
-                    <p className="text-3xl font-bold text-[hsl(142,71%,45%)]">14.7x</p>
-                  </div>
-                </div>
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <p className="text-sm text-muted-foreground mb-2">Missed leads</p>
+                <p className="text-2xl font-bold text-red-500 mb-1">40%</p>
+                <ArrowRight className="text-[hsl(142,71%,45%)] my-2" size={20} />
+                <p className="text-2xl font-bold text-[hsl(142,71%,45%)]">&lt; 5%</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <p className="text-sm text-muted-foreground mb-2">Conversion rate</p>
+                <p className="text-2xl font-bold text-red-500 mb-1">12%</p>
+                <ArrowRight className="text-[hsl(142,71%,45%)] my-2" size={20} />
+                <p className="text-2xl font-bold text-[hsl(142,71%,45%)]">38%</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <p className="text-sm text-muted-foreground mb-2">Customer satisfaction</p>
+                <p className="text-2xl font-bold text-red-500 mb-1">7 / 10</p>
+                <ArrowRight className="text-[hsl(142,71%,45%)] my-2" size={20} />
+                <p className="text-2xl font-bold text-[hsl(142,71%,45%)]">9.4 / 10</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Implementation Process */}
+      {/* AMO AI WhatsApp Process */}
       <section className="section-padding bg-[hsl(0,0%,5%)] text-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our Implementation Process: Clear & Proven
+              The AMO AI WhatsApp Process
             </h2>
-            <p className="text-lg text-gray-300">4 structured phases from discovery to scale</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               {
-                step: "1. Discovery",
-                title: "Map Your Flows",
-                items: ["Analyze customer journeys", "Define automation opportunities", "Set KPIs & success metrics"],
-                duration: "Week 1"
+                step: "1",
+                title: "Discovery Call",
+                subtitle: "Understand Your Goals",
+                description: "We start with a short consultation to map your communication needs, pain points, and automation potential."
               },
               {
-                step: "2. Design",
-                title: "Build the Blueprint",
-                items: ["Conversation flow design", "Integration planning", "Approval & refinement"],
-                duration: "Week 2"
+                step: "2",
+                title: "Workflow Blueprint",
+                subtitle: "Design Your Automation Flow",
+                description: "Our experts design a custom WhatsApp journey — from first message to sale or booking."
               },
               {
-                step: "3. Development",
-                title: "Build & Test",
-                items: ["AI training & setup", "System integrations", "Quality assurance testing"],
-                duration: "Weeks 3-4"
+                step: "3",
+                title: "Development & Integration",
+                subtitle: "Build and Connect Everything",
+                description: "We integrate WhatsApp with your CRM, Supabase, n8n, and any payment gateway you use."
               },
               {
-                step: "4. Deploy",
+                step: "4",
+                title: "AI Training & Testing",
+                subtitle: "Train Your Chat Agents",
+                description: "We teach your Copilot to answer real customer questions, qualify leads, and adapt over time."
+              },
+              {
+                step: "5",
                 title: "Launch & Optimize",
-                items: ["Gradual rollout", "Performance monitoring", "Continuous optimization"],
-                duration: "Weeks 5-6"
+                subtitle: "Go Live & Measure Results",
+                description: "Once launched, we monitor performance, tweak flows, and report conversions every week."
               }
             ].map((phase, index) => (
               <Card key={index} className="bg-[hsl(0,0%,11%)] border-[hsl(0,0%,18%)] text-white">
                 <CardHeader>
-                  <div className="text-[hsl(142,71%,45%)] font-bold mb-2">{phase.step}</div>
+                  <div className="w-12 h-12 rounded-lg bg-[hsl(142,71%,45%)] flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-white">{phase.step}</span>
+                  </div>
                   <CardTitle className="text-xl">{phase.title}</CardTitle>
-                  <p className="text-sm text-gray-400">{phase.duration}</p>
+                  <p className="text-sm font-semibold text-[hsl(142,71%,45%)] mt-2">{phase.subtitle}</p>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
-                    {phase.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <CheckCircle className="text-[hsl(142,71%,45%)] mt-0.5 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-gray-300 text-sm leading-relaxed">{phase.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
           <div className="text-center mt-8">
-            <div className="inline-flex items-center gap-2 bg-[hsl(142,71%,45%)] text-white px-6 py-3 rounded-full">
-              <Clock size={20} />
-              <span className="font-semibold">Average Time to Launch: 6 Weeks</span>
-            </div>
+            <Button size="lg" className="bg-[hsl(142,71%,45%)] hover:bg-[hsl(142,71%,40%)] text-white">
+              <Link to="/contact">👉 Start Your WhatsApp Project</Link>
+            </Button>
+            <p className="text-sm text-gray-400 mt-4">Launch in as little as <span className="text-[hsl(142,71%,45%)] font-semibold">2 weeks</span></p>
           </div>
         </div>
       </section>
 
-      {/* Pricing Packages */}
+      {/* Technology Stack */}
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Pricing Packages That Pay For Themselves
+              Built on Proven Technology
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                name: "Starter",
-                price: "$3,500",
-                description: "Perfect for small businesses testing WhatsApp automation",
-                features: [
-                  "Single automated flow",
-                  "Up to 1,000 conversations/month",
-                  "Basic analytics dashboard",
-                  "Email support",
-                  "2 weeks implementation"
-                ]
-              },
-              {
-                name: "Professional",
-                price: "$8,500",
-                description: "Ideal for growing businesses scaling customer engagement",
-                features: [
-                  "3 automated flows",
-                  "Up to 10,000 conversations/month",
-                  "Advanced analytics & insights",
-                  "CRM integration",
-                  "Priority support",
-                  "4-6 weeks implementation"
-                ],
-                popular: true
-              },
-              {
-                name: "Enterprise",
-                price: "Custom",
-                description: "For organizations requiring full-scale automation",
-                features: [
-                  "Unlimited automated flows",
-                  "Unlimited conversations",
-                  "Custom integrations",
-                  "Dedicated success manager",
-                  "24/7 priority support",
-                  "Custom implementation timeline"
-                ]
-              }
-            ].map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-[hsl(142,71%,45%)] border-2 shadow-xl' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-[hsl(142,71%,45%)] text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="text-3xl font-bold text-[hsl(142,71%,45%)]">{plan.price}</div>
-                  <CardDescription className="text-base">{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle className="text-[hsl(142,71%,45%)] mt-0.5 flex-shrink-0" size={18} />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-[hsl(142,71%,45%)] hover:bg-[hsl(142,71%,40%)] text-white' : ''}`} variant={plan.popular ? 'default' : 'outline'}>
-                    <Link to="/contact">Get Started</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {["Supabase", "n8n", "CopilotKit", "CrewAI", "LangChain", "Stripe", "WhatsApp Business API", "Cloudinary", "Webflow"].map((tech, index) => (
+              <div key={index} className="bg-muted px-6 py-3 rounded-full text-sm font-medium">
+                {tech}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why AMO AI */}
-      <section className="section-padding bg-[hsl(0,0%,5%)] text-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why AMO AI?</h2>
-            <p className="text-lg text-gray-300">We don't just build bots—we build revenue engines</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: Zap,
-                title: "Fast Implementation",
-                description: "6-week average from kick-off to launch, not 6 months"
-              },
-              {
-                icon: BarChart3,
-                title: "Data-Driven Design",
-                description: "Every flow optimized with analytics and A/B testing"
-              },
-              {
-                icon: Shield,
-                title: "Enterprise Security",
-                description: "Bank-level encryption and GDPR compliance built-in"
-              },
-              {
-                icon: Users,
-                title: "Human Handoff",
-                description: "Seamless escalation when customers need real agents"
-              },
-              {
-                icon: TrendingUp,
-                title: "Continuous Optimization",
-                description: "Monthly performance reviews and improvements"
-              },
-              {
-                icon: DollarSign,
-                title: "ROI Guarantee",
-                description: "We track and prove the financial impact of every automation"
-              }
-            ].map((benefit, index) => (
-              <Card key={index} className="bg-[hsl(0,0%,11%)] border-[hsl(0,0%,18%)] text-white hover:border-[hsl(142,71%,45%)] transition-all">
-                <CardHeader>
-                  <benefit.icon className="text-[hsl(142,71%,45%)] mb-2" size={32} />
-                  <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Pricing Packages - Removed as per new content */}
 
       {/* FAQ Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-[hsl(0,0%,5%)] text-white">
         <div className="container max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -472,35 +360,27 @@ const WhatsAppAutomation = () => {
           <Accordion type="single" collapsible className="space-y-4">
             {[
               {
-                question: "How long does it take to implement?",
-                answer: "Most WhatsApp automation projects take 4-6 weeks from kickoff to launch. Simple flows can be live in 2-3 weeks, while complex multi-flow systems may take 8-10 weeks."
+                question: "Do you use the official WhatsApp Business API?",
+                answer: "Yes. All systems are built on Meta-approved providers for full compliance and reliability."
               },
               {
-                question: "What's required to get started?",
-                answer: "You'll need a WhatsApp Business API account (we can help you set this up), access to your existing systems for integration, and clarity on your customer communication workflows."
+                question: "Can I integrate WhatsApp with my CRM or database?",
+                answer: "Absolutely. We connect to Supabase, HubSpot, Zoho, or your internal tools."
               },
               {
-                question: "Can it integrate with our existing systems?",
-                answer: "Yes! We integrate with most CRMs (Salesforce, HubSpot, etc.), e-commerce platforms (Shopify, WooCommerce), and custom APIs. If you have a system, we can likely connect it."
+                question: "Is this AI or just a bot?",
+                answer: "Both. We use automation (n8n) for structured tasks and AI agents (CrewAI + LangGraph) for intelligent responses."
               },
               {
-                question: "What happens when the bot can't answer?",
-                answer: "Our systems include intelligent escalation to human agents. When the AI detects complex queries or customer frustration, it seamlessly transfers to your support team with full conversation context."
-              },
-              {
-                question: "How do you measure success?",
-                answer: "We track conversation completion rates, automation rates, response times, customer satisfaction scores, and most importantly—revenue impact and cost savings. Every metric ties back to business value."
-              },
-              {
-                question: "Is my data secure?",
-                answer: "Absolutely. We use enterprise-grade encryption, comply with GDPR and data protection regulations, and never store sensitive customer data longer than necessary. Security audits available on request."
+                question: "How long does setup take?",
+                answer: "Most projects are fully live within 2–4 weeks of onboarding."
               }
             ].map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6">
-                <AccordionTrigger className="text-left font-semibold hover:text-[hsl(142,71%,45%)]">
+              <AccordionItem key={index} value={`item-${index}`} className="border border-[hsl(0,0%,18%)] rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold text-white hover:text-[hsl(142,71%,45%)]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-gray-300">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -514,34 +394,18 @@ const WhatsAppAutomation = () => {
         <div className="container">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Your Next Step: Transform WhatsApp Into Your #1 Revenue Channel
+              Let's automate your business on WhatsApp — start today.
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              Join 100+ businesses using WhatsApp automation to scale customer engagement and drive measurable ROI.
+              Whether you want faster sales responses, automated booking, or AI-driven campaigns, our team will design and deploy your WhatsApp system — from strategy to launch.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <MessageCircle className="mx-auto mb-3" size={32} />
-                <h3 className="font-semibold mb-2">Book a Strategy Call</h3>
-                <p className="text-sm text-white/80">30-min consultation to map your automation opportunities</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <BarChart3 className="mx-auto mb-3" size={32} />
-                <h3 className="font-semibold mb-2">Get a Custom Proposal</h3>
-                <p className="text-sm text-white/80">Tailored solution with ROI projections for your business</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <Zap className="mx-auto mb-3" size={32} />
-                <h3 className="font-semibold mb-2">Launch in 6 Weeks</h3>
-                <p className="text-sm text-white/80">From kickoff to live automation serving your customers</p>
-              </div>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-[hsl(142,71%,45%)] hover:bg-white/90">
-                <Link to="/contact">Start Your WhatsApp Project</Link>
+                <Link to="/contact">📞 Book a Demo Call</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                <Link to="/ai-brief">Complete AI Brief</Link>
+                <MessageCircle className="mr-2" size={20} />
+                <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer">💬 Chat with Us on WhatsApp</a>
               </Button>
             </div>
           </div>
